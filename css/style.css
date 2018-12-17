@@ -1,48 +1,53 @@
-@import url('https://fonts.googleapis.com/css?family=Elsie+Swash+Caps:400,900');
-@import url('https://fonts.googleapis.com/css?family=Clicker+Script');
-/* This is a comment! */
+@import url(http://fonts.googleapis.com/css?family=Elsie+Swash+Caps:400,900);
+@import url(http://fonts.googleapis.com/css?family=Clicker+Script);
 
-/* CSS syntax:
-  selector {
+/* This
+is
+a comment! */
+
+/* CSS Syntax:
+
+selector {
   property: value;
   property: value;
 }
+
 */
 
-/* Type selector:*/
+/* Type selector */
 
-p { /* selects all <p> tags */
-  font-size: 1em;
+p { /* select all <p> */
+  font-size: 1em; /* 16px, ?pt, 100%, 1em */
   line-height: 1.5em;
 }
 
 figcaption {
-  /* font-weight: normal;
+  /*font-weight: normal;
   font-size: 0.75em;
   line-height: 1.5em;
-  font-family: Georgia, "New Times Roman", serif; */
+  font-family: Georgia, "New Times Roman", serif;*/
   font: normal 0.75em/1.5em 'Elsie Swash Caps', cursive;
   color: #777;
-  text-align: right
+  text-align: right;
 }
 
-/* Class selectors (applied to as many elements as you like. they can even be different types of elements.)*/
+/* Class selector (applied to as many elements as you like) */
 
-.milk-text{ /*select attributes with class = "milk-text" */
+.milk-text { /* select elements with class="milk-text" */
   font: bold 2.6em 'Elsie Swash Caps', cursive;
   color: white;
   text-shadow: 0 2px 3px #000;
 }
 
-/* Id selector  (only apply to one unique element per page) */
+/* ID selector (apply to one unique element per page) */
 
-#logo{ /* select elements with the id="logo" */
-  background: aqua;
+#logo { /* select elements with id="logo" */
+
 }
 
-/* Descendant Selector (select the descendants within another parent element) */
+/* Descendent Selector */
 
-#logo h1 { /* style h1s if they're inside #logo */
+#logo h1 { /* selects <h1> if inside the id="logo" */
   font-family: 'Clicker Script', cursive;
 }
 
@@ -50,7 +55,7 @@ figcaption {
   font-family: 'Elsie Swash Caps', cursive;
 }
 
-/* Pseudo class selectors (based on relationship among oother elements or event state) */
+/* Psuedo Selector */
 
 #details a:link, #details a:visited {
   color: black;
@@ -58,10 +63,91 @@ figcaption {
 }
 
 #details a:hover {
-  color:black;
-  text-decoration:underline;
+  color: black;
+  text-decoration: underline;
 }
 
 #details a:active {
-  color:red;
+  color: red;
+}
+/*//////////Media//////*/
+img, video, audio {
+  max-width: 100%
+}
+/*//////////Layout//////*/
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  width: 960px;
+  margin: 0 auto; /*this centers everything*/
+  background: #eee;
+}
+
+.col-1 {
+  float: left;
+  width: 32%;
+  background: #ccc
+}
+
+.col-2 {
+  float:left;
+  width: 66%;
+  background: #ccc
+}
+
+.col-3 {
+  background: #ccc;
+}
+
+.clearfix:after {
+  content: ".";
+  display:block;
+  clear:both;
+  visibility:hidden;
+  height:0;
+  line-height:0
+}
+
+[class*="col-"] {
+  margin-left: 2%
+}
+
+.first {
+  margin-left: 0%;
+}
+
+/*//////////Sections//////*/
+header {
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  background:white;
+  z-index:1;
+}
+
+section {
+  padding:20px;
+  margin-bottom:20px;
+}
+
+/*//////////Social//////*/
+#social {
+  position:fixed;
+  top:200px;
+  right:20px;
+  width:40px;
+  z-index:1;
+}
+
+#social a {
+  display:block;
+  width:40px;
+  height:40px;
+  background:yellow;
 }
